@@ -1,0 +1,28 @@
+Get Docker "virtual container" (Windows download)
+https://github.com/docker/toolbox/releases/download/v1.9.1i/DockerToolbox-1.9.1i.exe
+Get Started with Docker for Windows: https://docs.docker.com/windows/
+
+Activity Streams store
+Open Ahjo API -> Local Mongo DB (server.js)
+https://github.com/samuelmr/activitystore-poc
+Get the 10 most recent objects: http://localhost:5000/object/?max=10
+
+Reads agenda items from Helsinki Decisions API, transforms the items into Activity Streams and pushes the events into activitystreams-server.
+(Python)
+https://github.com/okffi/decision-streamer
+
+Reference implementation of an ActivityStreams 2.0 server
+We use Grunt, npm, and mongodb. Mongo needs to be running for ActivityStreams 2.0 server to work.
+https://github.com/OpenSocial/activitystreams-server
+
+A D-CENT project: A simple service for storing, retrieving and signing activities (Activity Stream 2.0)
+https://github.com/d-cent/coracle
+
+How to start
+https://hub.docker.com/_/mongo/
+docker run --name some-mongo -d mongo
+docker pull dcent/coracle
+docker run -d --name coracle --link mongo:mongo -p 7000:7000 dcent/coracle
+
+UI:
+https://github.com/ThoughtWorksInc/helsinki
